@@ -1,0 +1,22 @@
+GET https://www.googleapis.com/books/v1/volumes?q=turing HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: www.googleapis.com
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+Response:
+HTTP/1.1 200 OK
+Expires: Tue, 10 Feb 2015 10:01:05 GMT
+Date: Tue, 10 Feb 2015 10:01:05 GMT
+Cache-Control: private, max-age=0, must-revalidate, no-transform
+ETag: "_rmWcTkH-s1QFjg9mC3Xel0FZSQ/kAxda_29qooG4sKyCNgIZlPsCMc"
+Vary: Origin
+Vary: X-Origin
+Content-Type: application/json; charset=UTF-8
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Length: 28526
+Server: GSE
+Alternate-Protocol: 443:quic,p=0.02
+Overview:
+We requested a GET in HTTP 1.1 format and can accept responses in gzip and deflate. The server responded in kind with HTTP 1.1 and everything went ok on the server's end (200 OK). The reply is in plain JSON.

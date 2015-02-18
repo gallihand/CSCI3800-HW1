@@ -1,0 +1,49 @@
+Request:
+POST http://www.webservicex.net/geoipservice.asmx HTTP/1.1
+Accept-Encoding: gzip,deflate
+Content-Type: text/xml;charset=UTF-8
+SOAPAction: "http://www.webservicex.net/GetGeoIP"
+Content-Length: 317
+Host: www.webservicex.net
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webservicex.net/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetGeoIP>
+         <!--Optional:-->
+         
+      <web:IPAddress>212.58.246.91</web:IPAddress></web:GetGeoIP>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+Response:
+HTTP/1.1 200 OK
+Cache-Control: private, max-age=0
+Content-Type: text/xml; charset=utf-8
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Server: Microsoft-IIS/7.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Tue, 10 Feb 2015 10:15:43 GMT
+Content-Length: 402
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <soap:Body>
+      <GetGeoIPResponse xmlns="http://www.webservicex.net/">
+         <GetGeoIPResult>
+            <ReturnCode>1</ReturnCode>
+            <IP>212.58.246.91</IP>
+            <ReturnCodeDetails>Success</ReturnCodeDetails>
+            <CountryName>United Kingdom</CountryName>
+            <CountryCode>GBR</CountryCode>
+         </GetGeoIPResult>
+      </GetGeoIPResponse>
+   </soap:Body>
+</soap:Envelope>
+
+
+Overview:
+We tried to POST to the server in HTTP 1.1 with an XML or text package. We asked the server to keep the connection open. The server replied with a success message (200 OK) and in text/xml as well.
